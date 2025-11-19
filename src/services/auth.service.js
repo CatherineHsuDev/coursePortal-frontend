@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_URL = "https://courseportal-backend.onrender.com/api/user";
+// const API_URL = "https://courseportal-backend.onrender.com/api/user";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+const API_URL = `${SERVER_URL}/api/user`;
 
 class AuthService {
   login(email, password) {
@@ -9,6 +11,11 @@ class AuthService {
       password,
     });
   }
+
+  googleLogin(credential) {
+    return axios.post(`${SERVER_URL}/api/auth/google`, { credential });
+  }
+
   logout() {
     localStorage.removeItem("user");
   }
