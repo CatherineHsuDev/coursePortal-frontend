@@ -17,7 +17,7 @@ const EnrollComponent = ({ currentUser, setCurrentUser }) => {
   const handleSearch = () => {
     CourseService.getCourseByName(searchInput)
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         setSearchResult(data.data);
       })
