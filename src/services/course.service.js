@@ -1,6 +1,8 @@
 import axios from "axios";
-const API_URL = "https://courseportal-backend.onrender.com/api/courses";
 // const API_URL = "http://localhost:4000/api/courses";
+
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+const API_URL = `${SERVER_URL}/api/courses`;
 
 class CourseService {
   post(title, description, price) {
