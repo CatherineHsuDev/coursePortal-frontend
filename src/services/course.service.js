@@ -1,6 +1,6 @@
 import axios from "axios";
-// const API_URL = "https://courseportal-backend.onrender.com/api/courses";
-const API_URL = "http://localhost:4000/api/courses";
+const API_URL = "https://courseportal-backend.onrender.com/api/courses";
+// const API_URL = "http://localhost:4000/api/courses";
 
 class CourseService {
   post(title, description, price) {
